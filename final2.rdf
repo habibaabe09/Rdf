@@ -394,7 +394,10 @@
 
     <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#comment -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#comment"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#comment">
+        <rdfs:domain rdf:resource="https://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -402,6 +405,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#deliveryCost">
         <rdfs:domain rdf:resource="https://schema.org/DeliveryMethod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
@@ -464,6 +468,7 @@
     <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#websiteURL -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#websiteURL">
+        <rdfs:domain rdf:resource="https://schema.org/WebPage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
     
@@ -480,7 +485,10 @@
 
     <!-- https://schema.org/dateIssued -->
 
-    <owl:DatatypeProperty rdf:about="https://schema.org/dateIssued"/>
+    <owl:DatatypeProperty rdf:about="https://schema.org/dateIssued">
+        <rdfs:domain rdf:resource="https://schema.org/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -701,7 +709,7 @@
     <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment">
-        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Transaction"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
     </owl:Class>
     
@@ -717,15 +725,7 @@
 
     <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund">
-        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnPayment"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnPayment -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnPayment"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
     
 
 
@@ -759,18 +759,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Transaction -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Transaction"/>
-    
-
-
-    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse"/>
-    
-
-
     <!-- https://schema.org/Address -->
 
     <owl:Class rdf:about="https://schema.org/Address"/>
@@ -794,12 +782,6 @@
     <!-- https://schema.org/Invoice -->
 
     <owl:Class rdf:about="https://schema.org/Invoice"/>
-    
-
-
-    <!-- https://schema.org/ItemList -->
-
-    <owl:Class rdf:about="https://schema.org/ItemList"/>
     
 
 
@@ -1467,9 +1449,7 @@
 
     <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse1"/>
     
 
 
