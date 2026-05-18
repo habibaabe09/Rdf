@@ -1,0 +1,1766 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47/"
+     xml:base="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47/"
+     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.org/"
+     xmlns:untitled-ontology-47="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Purchase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Purchase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#about -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#about">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasReview"/>
+        <rdfs:domain rdf:resource="https://schema.org/Review"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>reviws of product</rdfs:comment>
+        <rdfs:label>about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#approvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#approvedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#approves"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff"/>
+        <rdfs:comment>return request approval</rdfs:comment>
+        <rdfs:label>approvedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#approves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#approves">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <rdfs:comment>who approves the request</rdfs:comment>
+        <rdfs:label>approves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#belongsTo">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+        <rdfs:comment>product  of category</rdfs:comment>
+        <rdfs:label>belongsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#contains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+        <rdfs:comment>cart cotaining</rdfs:comment>
+        <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#delivers -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#delivers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent"/>
+        <rdfs:range rdf:resource="https://schema.org/Order"/>
+        <rdfs:comment>who delivers the pacel</rdfs:comment>
+        <rdfs:label>delivers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#generatedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#generatedFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasInvoice"/>
+        <rdfs:domain rdf:resource="https://schema.org/Invoice"/>
+        <rdfs:range rdf:resource="https://schema.org/Order"/>
+        <rdfs:comment>Generate Invoice for order</rdfs:comment>
+        <rdfs:label>generatedFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#has">
+        <rdfs:domain rdf:resource="https://schema.org/Order"/>
+        <rdfs:range rdf:resource="https://schema.org/OrderItem"/>
+        <rdfs:comment>Represents a general relationship between two entities</rdfs:comment>
+        <rdfs:label>has</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasAddress">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+                    <rdf:Description rdf:about="https://schema.org/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://schema.org/Address"/>
+        <rdfs:comment>Links a customer with an address</rdfs:comment>
+        <rdfs:label>hasAddress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasBrand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasBrand">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Brand"/>
+        <rdfs:comment>shows the brand of product</rdfs:comment>
+        <rdfs:label>hasBrand</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasInvoice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasInvoice">
+        <rdfs:domain rdf:resource="https://schema.org/Order"/>
+        <rdfs:range rdf:resource="https://schema.org/Invoice"/>
+        <rdfs:comment>Connects an order with its brand</rdfs:comment>
+        <rdfs:label>hasInvoice</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasPayment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasPayment">
+        <rdfs:domain rdf:resource="https://schema.org/Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment"/>
+        <rdfs:comment>represents the payment associated with an order</rdfs:comment>
+        <rdfs:label>hasPayment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasReview">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="https://schema.org/Review"/>
+        <rdfs:comment>Links a product with reviews</rdfs:comment>
+        <rdfs:label>hasReview</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#hasStatus">
+        <rdfs:domain rdf:resource="https://schema.org/Order"/>
+        <rdfs:range rdf:resource="https://schema.org/OrderStatus"/>
+        <rdfs:comment>Shows the current status of an order</rdfs:comment>
+        <rdfs:label>herStatus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#listedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#listedIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#stores"/>
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory"/>
+        <rdfs:comment>Indicates the inventory in which aProduct  is listed</rdfs:comment>
+        <rdfs:label>listedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#makesPayment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#makesPayment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment"/>
+        <rdfs:comment>Represents a customer making a payment For an order</rdfs:comment>
+        <rdfs:label>makesPayment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#managecus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#managecus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Administrator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:comment>Represent the management of customer information by administrator</rdfs:comment>
+        <rdfs:label>manageCus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#manages -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#manages">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory"/>
+        <rdfs:comment>Shows how seller manages the inventory</rdfs:comment>
+        <rdfs:label>manages</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#managesOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#managesOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff"/>
+        <rdfs:range rdf:resource="https://schema.org/Order"/>
+        <rdfs:comment>Represents a management of customer orders by staff</rdfs:comment>
+        <rdfs:label>managesOrder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ownedBy">
+        <owl:inverseOf rdf:resource="https://schema.org/owns"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:comment>Shows the ownership of cart</rdfs:comment>
+        <rdfs:label>ownedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#placedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#placedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#placesOrder"/>
+        <rdfs:domain rdf:resource="https://schema.org/Order"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:comment>Indicates which customer placed the order</rdfs:comment>
+        <rdfs:label>placedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#placesOrder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#placesOrder">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="https://schema.org/Order"/>
+        <rdfs:comment>Represents a customer placing an order</rdfs:comment>
+        <rdfs:label>placesOrder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#rAbout -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#rAbout">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>Return request for orderd product</rdfs:comment>
+        <rdfs:label>rAbout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#receivesRefund -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#receivesRefund">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundIssuedTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <rdfs:comment>Shows that a customer receives a refund</rdfs:comment>
+        <rdfs:label>recievesRefund</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refersTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refersTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>Indiicates  cart items refer to product</rdfs:comment>
+        <rdfs:label>refersTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundIssuedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundIssuedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:comment>Represents that a refund is issued to a customer</rdfs:comment>
+        <rdfs:label>refundIssuedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#requestsReturn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#requestsReturn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <rdfs:comment>Customer  request to return a product</rdfs:comment>
+        <rdfs:label>requestsReturn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#stores -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#stores">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>Inventory stores products</rdfs:comment>
+        <rdfs:label>stores</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#supplies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#supplies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Supplier"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>Represents a supplying products by a supplier</rdfs:comment>
+        <rdfs:label>supplies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#suppliesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#suppliesTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Supplier"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
+        <rdfs:comment>Showa that a supplier provied products to a seller</rdfs:comment>
+        <rdfs:label>suppliesTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#useDelivery -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#useDelivery">
+        <rdfs:domain rdf:resource="https://schema.org/ParcelDelivery"/>
+        <rdfs:range rdf:resource="https://schema.org/DeliveryMethod"/>
+        <rdfs:comment>Use of delivery</rdfs:comment>
+        <rdfs:label>useDelivery</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#uses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment"/>
+        <rdfs:range rdf:resource="https://schema.org/PaymentMethod"/>
+        <rdfs:comment>uses of paymen method</rdfs:comment>
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#writes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#writes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#writtenBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="https://schema.org/Review"/>
+        <rdfs:comment>Customer  writing a review</rdfs:comment>
+        <rdfs:label>writes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#writtenBy">
+        <rdfs:domain rdf:resource="https://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:comment>Customer writes the review</rdfs:comment>
+        <rdfs:label>writtenBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/orderedItem -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/orderedItem">
+        <rdfs:domain rdf:resource="https://schema.org/OrderItem"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:label>orderedItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/owns -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/owns">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+        <rdfs:comment>Represents a ownership relationship</rdfs:comment>
+        <rdfs:label>owns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/worksFor -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/worksFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
+        <rdfs:range rdf:resource="https://schema.org/Brand"/>
+        <rdfs:label>worksFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#comment">
+        <rdfs:domain rdf:resource="https://schema.org/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Review on products</rdfs:comment>
+        <rdfs:label>comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#deliveryCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#deliveryCost">
+        <rdfs:domain rdf:resource="https://schema.org/DeliveryMethod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Cost of delivery</rdfs:comment>
+        <rdfs:label>deliveryCost</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#quantity">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+                    <rdf:Description rdf:about="https://schema.org/OrderItem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Number of iitems in cart</rdfs:comment>
+        <rdfs:label>quantity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Amount refunded</rdfs:comment>
+        <rdfs:label>refundAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date of refund</rdfs:comment>
+        <rdfs:label>refundDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundReason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#refundReason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The reason of refund</rdfs:comment>
+        <rdfs:label>refundReason</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#returnReason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#returnReason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Reson of return</rdfs:comment>
+        <rdfs:label>returnReason</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#taxAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#taxAmount">
+        <rdfs:domain rdf:resource="https://schema.org/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Applied tax amount</rdfs:comment>
+        <rdfs:label>taxAmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#websiteURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#websiteURL">
+        <rdfs:domain rdf:resource="https://schema.org/WebPage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>The url of website</rdfs:comment>
+        <rdfs:label>websiteURL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/addressRegion -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/addressRegion">
+        <rdfs:domain rdf:resource="https://schema.org/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address of region</rdfs:comment>
+        <rdfs:label>addressRegion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/dateIssued -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/dateIssued">
+        <rdfs:domain rdf:resource="https://schema.org/Invoice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>date issued for invoice</rdfs:comment>
+        <rdfs:label>dateIssued</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/description -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+                    <rdf:Description rdf:about="https://schema.org/Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>detail about category or product</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/email">
+        <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Email address of person</rdfs:comment>
+        <rdfs:label>email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/givenName -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/givenName">
+        <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>name of person</rdfs:comment>
+        <rdfs:label>givenName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/identifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+                    <rdf:Description rdf:about="https://schema.org/Invoice"/>
+                    <rdf:Description rdf:about="https://schema.org/Order"/>
+                    <rdf:Description rdf:about="https://schema.org/Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique identification value</rdfs:comment>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/inventoryLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/inventoryLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Available stock quantity</rdfs:comment>
+        <rdfs:label>inventoryLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+                    <rdf:Description rdf:about="https://schema.org/Brand"/>
+                    <rdf:Description rdf:about="https://schema.org/Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>name of product category and brand</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/orderDate -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/orderDate">
+        <rdfs:domain rdf:resource="https://schema.org/Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Date when order is placed</rdfs:comment>
+        <rdfs:label>orderDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/postalCode -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/postalCode">
+        <rdfs:domain rdf:resource="https://schema.org/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Postal code of address</rdfs:comment>
+        <rdfs:label>postalCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/price -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/price">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Shows the price of product</rdfs:comment>
+        <rdfs:label>price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/ratingValue">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Rating score</rdfs:comment>
+        <rdfs:label>ratingValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/streetAddress">
+        <rdfs:domain rdf:resource="https://schema.org/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address</rdfs:comment>
+        <rdfs:label>streetAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/telephone">
+        <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+        <rdfs:comment>Person telephone</rdfs:comment>
+        <rdfs:label>telephone</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/title -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/title">
+        <rdfs:domain rdf:resource="https://schema.org/WebPage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Title of webpage</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/totalPrice -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/totalPrice">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+                    <rdf:Description rdf:about="https://schema.org/Order"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>total price for cart items</rdfs:comment>
+        <rdfs:label>totalPrice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#Person -->
+
+    <owl:Class rdf:about="http://purl.org/goodrelations/v1#Person">
+        <rdfs:comment>representing each human being in ecomm</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Administrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Administrator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:comment>Manages customer</rdfs:comment>
+        <rdfs:label>Administer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart">
+        <rdfs:comment>Cart of customer</rdfs:comment>
+        <rdfs:label>Cart</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem">
+        <rdfs:comment>items in the cart</rdfs:comment>
+        <rdfs:label>Cartitem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category">
+        <rdfs:comment>different categories of products</rdfs:comment>
+        <rdfs:label>Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#placesOrder"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://schema.org/Order"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:comment>browse the webpage and order</rdfs:comment>
+        <rdfs:label>Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:comment>delivers the ordered items</rdfs:comment>
+        <rdfs:label>DeliveryAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory">
+        <rdfs:comment>list of products</rdfs:comment>
+        <rdfs:label>Inventory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <rdfs:comment>payments of the order</rdfs:comment>
+        <rdfs:label>Payment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Purchase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Purchase">
+        <owl:equivalentClass rdf:resource="https://schema.org/Order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund">
+        <rdfs:comment>returned amount</rdfs:comment>
+        <rdfs:label>Refund</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest">
+        <rdfs:comment>request to return</rdfs:comment>
+        <rdfs:label>ReturnRequest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:comment>sells products</rdfs:comment>
+        <rdfs:label>Seller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:comment>staff manages order</rdfs:comment>
+        <rdfs:label>Staff</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Supplier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Supplier">
+        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Person"/>
+        <rdfs:comment>supplies product to seller</rdfs:comment>
+        <rdfs:label>Supplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Address -->
+
+    <owl:Class rdf:about="https://schema.org/Address">
+        <rdfs:comment>Address of customer or organization</rdfs:comment>
+        <rdfs:label>Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Brand -->
+
+    <owl:Class rdf:about="https://schema.org/Brand">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+        <rdfs:comment>Name of Brand</rdfs:comment>
+        <rdfs:label>Brand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/DeliveryMethod -->
+
+    <owl:Class rdf:about="https://schema.org/DeliveryMethod">
+        <rdfs:comment>Different type of delivery for customer needs</rdfs:comment>
+        <rdfs:label>DeliveryMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Invoice -->
+
+    <owl:Class rdf:about="https://schema.org/Invoice">
+        <rdfs:comment>Bill of the order</rdfs:comment>
+        <rdfs:label>Invoice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Order -->
+
+    <owl:Class rdf:about="https://schema.org/Order">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#contains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://schema.org/OrderItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>purchase of customer</rdfs:comment>
+        <rdfs:label>Order</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/OrderItem -->
+
+    <owl:Class rdf:about="https://schema.org/OrderItem">
+        <rdfs:comment>items customer purchased</rdfs:comment>
+        <rdfs:label>OrderItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/OrderStatus -->
+
+    <owl:Class rdf:about="https://schema.org/OrderStatus">
+        <rdfs:comment>status of the order</rdfs:comment>
+        <rdfs:label>OrderStatus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+    <owl:Class rdf:about="https://schema.org/Organization">
+        <rdfs:comment>organization that handles the brand</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/ParcelDelivery -->
+
+    <owl:Class rdf:about="https://schema.org/ParcelDelivery">
+        <rdfs:comment>delivery of products</rdfs:comment>
+        <rdfs:label>ParcelDelivery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/PaymentMethod -->
+
+    <owl:Class rdf:about="https://schema.org/PaymentMethod">
+        <rdfs:comment>different modes of payment</rdfs:comment>
+        <rdfs:label>PaymentMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#belongsTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>items to sell</rdfs:comment>
+        <rdfs:label>Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Review -->
+
+    <owl:Class rdf:about="https://schema.org/Review">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#writtenBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>reviews of the products</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/WebPage -->
+
+    <owl:Class rdf:about="https://schema.org/WebPage">
+        <rdfs:comment>Online store of seller or brand</rdfs:comment>
+        <rdfs:label>WebPage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Address3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Address3">
+        <rdf:type rdf:resource="https://schema.org/Address"/>
+        <schema:addressRegion rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Sargodha</schema:addressRegion>
+        <schema:postalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40100</schema:postalCode>
+        <schema:streetAddress rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">street no 6 house 6</schema:streetAddress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Admin1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Admin1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Administrator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Books -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Books">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+        <untitled-ontology-47:refersTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P3"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+        <untitled-ontology-47:refersTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P4"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+        <untitled-ontology-47:refersTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5"/>
+        <schema:inventoryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</schema:inventoryLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CartItem"/>
+        <untitled-ontology-47:refersTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6"/>
+        <schema:inventoryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</schema:inventoryLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#COD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#COD">
+        <rdf:type rdf:resource="https://schema.org/PaymentMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+        <untitled-ontology-47:contains rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI1"/>
+        <untitled-ontology-47:contains rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CI2"/>
+        <untitled-ontology-47:ownedBy rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart"/>
+        <untitled-ontology-47:contains rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5"/>
+        <untitled-ontology-47:contains rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6"/>
+        <untitled-ontology-47:ownedBy rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Clothing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Clothing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CreditCard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CreditCard">
+        <rdf:type rdf:resource="https://schema.org/PaymentMethod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <untitled-ontology-47:placesOrder rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order1"/>
+        <untitled-ontology-47:writes rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R1"/>
+        <schema:owns rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart1"/>
+        <schema:email>ali12@gamil.com</schema:email>
+        <schema:givenName>Ali</schema:givenName>
+        <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20292280848</schema:telephone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <untitled-ontology-47:placesOrder rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order2"/>
+        <untitled-ontology-47:requestsReturn rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR1"/>
+        <untitled-ontology-47:writes rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R2"/>
+        <schema:owns rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart2"/>
+        <schema:email>sara@gmail.com</schema:email>
+        <schema:givenName>Sara</schema:givenName>
+        <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">08756434568</schema:telephone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+        <untitled-ontology-47:hasAddress rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Address3"/>
+        <untitled-ontology-47:placesOrder rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order3"/>
+        <untitled-ontology-47:receivesRefund rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund1"/>
+        <untitled-ontology-47:requestsReturn rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR2"/>
+        <untitled-ontology-47:writes rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R3"/>
+        <schema:owns rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Cart3"/>
+        <schema:email rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">ahmed978@gmail.com</schema:email>
+        <schema:givenName rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Ahmed</schema:givenName>
+        <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">657789975433</schema:telephone>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DA1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DA1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent"/>
+        <untitled-ontology-47:delivers rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order1"/>
+        <schema:name>Imran</schema:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DA2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DA2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent"/>
+        <untitled-ontology-47:delivers rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order2"/>
+        <schema:givenName>Bilal</schema:givenName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DA3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DA3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent"/>
+        <untitled-ontology-47:delivers rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order3"/>
+        <schema:givenName>kiran</schema:givenName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Delivered -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Delivered">
+        <rdf:type rdf:resource="https://schema.org/OrderStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Electronics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Electronics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Express -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Express">
+        <rdf:type rdf:resource="https://schema.org/DeliveryMethod"/>
+        <untitled-ontology-47:deliveryCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250</untitled-ontology-47:deliveryCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory"/>
+        <untitled-ontology-47:stores rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6"/>
+        <schema:inventoryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</schema:inventoryLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Nike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Nike">
+        <rdf:type rdf:resource="https://schema.org/Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Normal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Normal">
+        <rdf:type rdf:resource="https://schema.org/DeliveryMethod"/>
+        <untitled-ontology-47:deliveryCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</untitled-ontology-47:deliveryCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI1">
+        <rdf:type rdf:resource="https://schema.org/OrderItem"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI2">
+        <rdf:type rdf:resource="https://schema.org/OrderItem"/>
+        <schema:orderedItem rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P3"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI3">
+        <rdf:type rdf:resource="https://schema.org/OrderItem"/>
+        <schema:orderedItem rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P4"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI4">
+        <rdf:type rdf:resource="https://schema.org/OrderItem"/>
+        <schema:orderedItem rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI5">
+        <rdf:type rdf:resource="https://schema.org/OrderItem"/>
+        <schema:orderedItem rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5"/>
+        <untitled-ontology-47:quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-47:quantity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order1">
+        <rdf:type rdf:resource="https://schema.org/Order"/>
+        <untitled-ontology-47:has rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI1"/>
+        <untitled-ontology-47:hasPayment rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order2">
+        <rdf:type rdf:resource="https://schema.org/Order"/>
+        <untitled-ontology-47:has rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI2"/>
+        <untitled-ontology-47:has rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI3"/>
+        <untitled-ontology-47:hasInvoice rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice2"/>
+        <untitled-ontology-47:hasPayment rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay2"/>
+        <schema:orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-06T06:00:00</schema:orderDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order3">
+        <rdf:type rdf:resource="https://schema.org/Order"/>
+        <untitled-ontology-47:has rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI4"/>
+        <untitled-ontology-47:has rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#OI5"/>
+        <untitled-ontology-47:hasInvoice rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice3"/>
+        <untitled-ontology-47:hasPayment rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay3"/>
+        <untitled-ontology-47:hasStatus rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shippped"/>
+        <schema:orderDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-06T06:00:00</schema:orderDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P1">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-47:belongsTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Books"/>
+        <schema:name>Books</schema:name>
+        <schema:price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</schema:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P2">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-47:belongsTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Electronics"/>
+        <schema:name>Laptops</schema:name>
+        <schema:price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45000</schema:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P3">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-47:belongsTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Electronics"/>
+        <schema:name>HeadPhones</schema:name>
+        <schema:price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1500</schema:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P4">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-47:belongsTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Electronics"/>
+        <schema:name>MobilePhones</schema:name>
+        <schema:price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50000</schema:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-47:belongsTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Clothing"/>
+        <untitled-ontology-47:hasBrand rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shappire"/>
+        <untitled-ontology-47:listedIn rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory2"/>
+        <schema:name>Tops</schema:name>
+        <schema:price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</schema:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6">
+        <rdf:type rdf:resource="https://schema.org/Product"/>
+        <untitled-ontology-47:belongsTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Clothing"/>
+        <untitled-ontology-47:hasBrand rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Nike"/>
+        <untitled-ontology-47:listedIn rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#inventory1"/>
+        <schema:name>Denim Jackets</schema:name>
+        <schema:price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</schema:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#PD1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#PD1">
+        <rdf:type rdf:resource="https://schema.org/ParcelDelivery"/>
+        <untitled-ontology-47:useDelivery rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Express"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment"/>
+        <schema:totalPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200</schema:totalPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment"/>
+        <untitled-ontology-47:uses rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#COD"/>
+        <schema:totalPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000</schema:totalPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Pay3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Payment"/>
+        <untitled-ontology-47:uses rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#CreditCard"/>
+        <schema:totalPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5000</schema:totalPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R1">
+        <rdf:type rdf:resource="https://schema.org/Review"/>
+        <untitled-ontology-47:about rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P1"/>
+        <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</schema:ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R2">
+        <rdf:type rdf:resource="https://schema.org/Review"/>
+        <untitled-ontology-47:about rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P3"/>
+        <untitled-ontology-47:writtenBy rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer2"/>
+        <untitled-ontology-47:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Good products but delivery was slow</untitled-ontology-47:comment>
+        <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</schema:ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#R3">
+        <rdf:type rdf:resource="https://schema.org/Review"/>
+        <untitled-ontology-47:about rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5"/>
+        <untitled-ontology-47:writtenBy rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer3"/>
+        <untitled-ontology-47:comment>good</untitled-ontology-47:comment>
+        <schema:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</schema:ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <untitled-ontology-47:approvedBy rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff1"/>
+        <untitled-ontology-47:rAbout rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P4"/>
+        <untitled-ontology-47:returnReason rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Damaged Goods</untitled-ontology-47:returnReason>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#ReturnRequest"/>
+        <untitled-ontology-47:approvedBy rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff1"/>
+        <untitled-ontology-47:rAbout rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P6"/>
+        <untitled-ontology-47:returnReason>Damaged</untitled-ontology-47:returnReason>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Refund"/>
+        <untitled-ontology-47:refundIssuedTo rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer3"/>
+        <untitled-ontology-47:refundAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</untitled-ontology-47:refundAmount>
+        <untitled-ontology-47:refundReason>product Damage</untitled-ontology-47:refundReason>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shappire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shappire">
+        <rdf:type rdf:resource="https://schema.org/Brand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shippped -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shippped">
+        <rdf:type rdf:resource="https://schema.org/OrderStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff"/>
+        <untitled-ontology-47:approves rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR1"/>
+        <untitled-ontology-47:approves rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#RR2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Vahicles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Vahicles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WP1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WP1">
+        <rdf:type rdf:resource="https://schema.org/WebPage"/>
+        <untitled-ontology-47:websiteURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">www.fashionstyle.com</untitled-ontology-47:websiteURL>
+        <schema:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">Fashion style</schema:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#WareHouse1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#inventory1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#inventory1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Inventory"/>
+        <untitled-ontology-47:stores rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#P5"/>
+        <schema:inventoryLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</schema:inventoryLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice1">
+        <rdf:type rdf:resource="https://schema.org/Invoice"/>
+        <untitled-ontology-47:generatedFor rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order1"/>
+        <untitled-ontology-47:taxAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400</untitled-ontology-47:taxAmount>
+        <schema:dateIssued>Today</schema:dateIssued>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice2">
+        <rdf:type rdf:resource="https://schema.org/Invoice"/>
+        <untitled-ontology-47:generatedFor rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order2"/>
+        <untitled-ontology-47:taxAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</untitled-ontology-47:taxAmount>
+        <schema:dateIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-06T06:00:00</schema:dateIssued>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#invoice3">
+        <rdf:type rdf:resource="https://schema.org/Invoice"/>
+        <untitled-ontology-47:taxAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</untitled-ontology-47:taxAmount>
+        <schema:dateIssued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-05-06T06:00:00</schema:dateIssued>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#seller2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#seller2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
+        <schema:worksFor rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Shappire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Purchase">
+        <rdfs:comment>order</rdfs:comment>
+        <rdfs:label>purchase</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Administrator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Customer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#DeliveryAgent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Staff"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Supplier"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
