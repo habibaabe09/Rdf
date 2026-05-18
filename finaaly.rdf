@@ -429,6 +429,7 @@
     <owl:ObjectProperty rdf:about="https://schema.org/orderedItem">
         <rdfs:domain rdf:resource="https://schema.org/OrderItem"/>
         <rdfs:range rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>order items</rdfs:comment>
         <rdfs:label>orderedItem</rdfs:label>
     </owl:ObjectProperty>
     
@@ -450,6 +451,7 @@
     <owl:ObjectProperty rdf:about="https://schema.org/worksFor">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Seller"/>
         <rdfs:range rdf:resource="https://schema.org/Brand"/>
+        <rdfs:comment>seller worksfor brand</rdfs:comment>
         <rdfs:label>worksFor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1689,7 +1691,8 @@
         <rdf:type rdf:resource="https://schema.org/Invoice"/>
         <untitled-ontology-47:generatedFor rdf:resource="http://www.semanticweb.org/itccl/ontologies/2026/3/untitled-ontology-47#Order1"/>
         <untitled-ontology-47:taxAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400</untitled-ontology-47:taxAmount>
-        <schema:dateIssued>Today</schema:dateIssued>
+        <schema:dateIssued>2025-05-06T06:00:00</schema:dateIssued>
+        <rdfs:comment></rdfs:comment>
     </owl:NamedIndividual>
     
 
